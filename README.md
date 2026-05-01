@@ -6,7 +6,7 @@ Code for "Jukebox: A Generative Model for Music"
 [Paper](https://arxiv.org/abs/2005.00341) 
 [Blog](https://openai.com/blog/jukebox) 
 [Explorer](http://jukebox.openai.com/) 
-[Colab](https://colab.research.google.com/github/openai/jukebox/blob/master/jukebox/Interacting_with_Jukebox.ipynb) 
+[Colab Quickstart (emcee3 fork)](https://colab.research.google.com/github/emcee3/jukebox/blob/colab-1b-lyrics-timing-fix/jukebox/Interacting_with_Jukebox.ipynb) 
 
 # Install
 Install the conda package manager from https://docs.conda.io/en/latest/miniconda.html    
@@ -281,4 +281,3 @@ Please cite using the following bibtex entry:
 [Noncommercial Use License](./LICENSE) 
 
 It covers both released code and weights. 
-
