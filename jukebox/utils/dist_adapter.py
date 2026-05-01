@@ -1,6 +1,10 @@
 import torch.distributed as dist
 from enum import Enum
 
+
+def _is_initialized():
+    return dist.is_available() and dist.is_initialized()
+
 class ReduceOp(Enum):
     SUM = 0,
     PRODUCT = 1,
@@ -16,7 +20,7 @@ class ReduceOp(Enum):
         }[self]
 
 def is_available():
-    return dist.is_available()
+    return _is_initialized()
 
 def get_rank():
     if is_available():
@@ -57,7 +61,7 @@ def broadcast(tensor, src):
     #else: do nothing
 
 def init_process_group(backend, init_method):
-    if is_available():
+    if dist.is_available():
         return _init_process_group(backend, init_method)
     #else: do nothing
 
